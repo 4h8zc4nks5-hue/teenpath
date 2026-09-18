@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Поговорити — TeenPath</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f3ff;
+    color: #29233d;
+}
+
+header {
+    padding: 20px 30px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7657e8;
+}
+
+.back {
+    text-decoration: none;
+    color: #7657e8;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.chat {
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    min-height: 400px;
+    box-shadow: 0 10px 30px rgba(80,60,130,0.1);
+}
+
+.message {
+    background: #f0ecff;
+    padding: 15px 18px;
+    border-radius: 18px;
+    margin-bottom: 15px;
+    max-width: 80%;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 16px;
+    border: 2px solid #e2ddf5;
+    border-radius: 15px;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    border: none;
+    background: #7657e8;
+    color: white;
+    padding: 0 22px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6245d0;
+}
+
+.note {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">TeenPath</div>
+    <a class="back" href="index.html">← На головну</a>
+</header>
+
+<div class="container">
+
+    <h1>💬 Поговорити</h1>
+
+    <p class="subtitle">
+        Тут можна зупинитися на хвилинку та розповісти, що тебе турбує.
+    </p>
+
+    <div class="chat">
+
+        <div class="message">
+            Привіт 💜 Я TeenPath. Можеш написати, що зараз у тебе на думці.
+        </div>
+
+        <div class="message">
+            Я не замінюю психолога чи лікаря, але можу допомогти розкласти думки по поличках.
+        </div>
+
+        <div class="input-area">
+            <input type="text" placeholder="Напиши щось..." id="messageInput">
+            <button onclick="sendMessage()">Надіслати</button>
+        </div>
+
+    </div>
+
+    <div class="note">
+        TeenPath — простір підтримки для підлітків 🌱
+    </div>
+
+</div>
+
+<script>
+function sendMessage() {
+    const input = document.getElementById("messageInput");
+
+    if (input.value.trim() === "") {
+        return;
+    }
+
+    alert("Твоє повідомлення: " + input.value);
+
+    input.value = "";
+}
+</script>
+
+</body>
+</html>
